@@ -1,5 +1,6 @@
 const cursor = document.querySelector(".cursor");
 const page1 = document.querySelector("#page1");
+gsap.registerPlugin(ScrollTrigger);
 function cursorEffect() {
   page1.addEventListener("mousemove", (e) => {
     cursor.style.top = `${e.clientY}px`;
@@ -78,4 +79,12 @@ tl2
       scrub: true,
     },
   });
+
+
+  gsap.from("#page3 #Part-1 #firstH1::before", {
+ width:"0%",
+ opacity:0,
+ duration:2
+  });
 cursorEffect();
+
